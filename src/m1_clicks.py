@@ -15,7 +15,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 2. (4 pts)
+# DONE: 2. (4 pts)
 #
 #   Now, create a frame called frm_a that has a width of 100 and height of 100.
 #
@@ -39,14 +39,14 @@ import tkinter as tk
 
 window = tk.Tk()
 
-def left_handler():
+def left_handler(event):
     print("Left")
-def right_handler():
+def right_handler(event):
     print("Right")
 
 frm_a = tk.Frame(width=100, height=100)
 frm_a.pack()
-frm_a.bind("Button-1", left_handler)
-frm_a.bind("Button-3", right_handler)
+frm_a.bind("<Button-1>", left_handler)
+frm_a.bind("<Button-3>", right_handler)
 
 window.mainloop()
